@@ -1,0 +1,118 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>670</x><y>40</y><w>250</w><h>240</h></coordinates><panel_attributes>CGame
+--
+- m_board: CTicTacToeBoard
+- m_player[2]: CPlayer*
+- m_display: CDisplay*
+- m_state: state_t
+--
++ CGame
++ ~CGame
++ run(): RC_t
+- init(): void
+- chooseScreen(): RC_t
+- choosePlayer(): RC_t
+- ignoreRedundantKeyboardInput(): void
+- getCommand(): unsigned short
+--
+state_t</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>960</x><y>230</y><w>180</w><h>110</h></coordinates><panel_attributes>CDisplay
+--
+# m_pBoard: CBoard*
+--
++ CDisplay(pBoard: CBoard*)
++ ~CDisplay
++ print(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>910</x><y>120</y><w>160</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;20;130;20;130;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1180</x><y>230</y><w>170</w><h>110</h></coordinates><panel_attributes>CEclipseConsole
+--
+
+--
++ CEclipseConsole(pBoard: 
+CBoard*)
++ ~CEclipseConsole
++ print(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1130</x><y>270</y><w>70</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;50;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>230</y><w>200</w><h>210</h></coordinates><panel_attributes>CPlayer
+--
+# m_stone: player_t
+# m_pBoard: CTicTacToeBoard*
+--
++ CPlayer(pBoard: CBoard*, 
+stone: player_t&amp;)
++ ~CPlayer
++ placeStone(): RC_t
++ isWin(): bool
+# opponentStone(): player_t
+# isMyOpponentWin(): bool
+# checkWinner(): player_t
+# isBoardFull(): bool</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>120</y><w>200</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=2
+</panel_attributes><additional_attributes>180;20;10;20;10;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>200</y><w>220</w><h>120</h></coordinates><panel_attributes>CHumanPlayer
+--
+
+--
++ CHumanPlayer(pBoard: CBoard*, 
+stone: player_t&amp;)
++ ~CHumanPlayer
++ placeStone(): RC_t</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>250</y><w>80</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>60;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>350</y><w>220</w><h>150</h></coordinates><panel_attributes>CBot
+--
+
+--
++ CBot(pBoard: CBoard*, 
+stone: player_t&amp;)
++ ~CBot
++ placeStone(): RC_t
+- minimax(depth: int, 
+isMaximizing: bool): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>410</y><w>80</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>60;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>350</y><w>300</w><h>210</h></coordinates><panel_attributes>CTicTacToeBoard
+--
+
+--
++ CTicTacToeBoard
++ CTicTacToeBoard(numRows: unsigned short, 
+numCols, unsigned short)
++ ~CTicTacToeBoard
++ countRow(stone: const player_t&amp;): unsigned 
+short
++ countColumn(stone: const player_t&amp;): unsigned 
+short
++ countDiagonal(stone: const player_t&amp;): unsigned 
+short</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>770</x><y>270</y><w>40</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>610</y><w>300</w><h>310</h></coordinates><panel_attributes>CBoard
+--
+# m_numRows: unsigned short
+# m_numCols: unsigned short
+# m_cellStatuses: player_t*
+--
++ CBoard
++ CBoard(numRows: unsigned short, 
+numCols: unsigned short)
++ ~CBoard
++ getNumOfRows(): unsigned short
++ getNumOfCols(): unsigned short
++ clear(): void
++ getElementAt(rowIndex: unsigned short): player_t
++ setElementAt(position: CPosition&amp;, 
+playerStone: player_t&amp;): RC_t
++ positionIsEmpty(position: CPosition&amp;): bool
++ operator= (rop: const CBoard&amp;): CBoard&amp;
+# calculateIndex(rowIndex: unsigned short, 
+columnIndex: unsigned short): unsigned short
+--
+player_t
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>550</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>930</x><y>330</y><w>130</w><h>400</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;380;110;380;110;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>510</y><w>230</w><h>250</h></coordinates><panel_attributes>CPosition
+--
+_- m_numRows: unsigned short_
+_- m_numCols: unsigned short_
+- m_row: unsigned short
+- m_col: unsigned short
+--
++ CPosition(rowIndex: unsigned short, 
+columnIndex: unsigned short)
++ getRow(): unsigned short
++ getCol(): unsigned short
++ operator==(rop: const CPosition&amp;): 
+bool
++ operator=(rop: const CPosition&amp;): 
+CPosition&amp;
+_- setSize(numRows: unsigned short, _
+_numCols: unsigned short): void_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>430</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>750</y><w>200</w><h>120</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;10;100;180;100</additional_attributes></element><element><id>Relation</id><coordinates><x>580</x><y>300</y><w>130</w><h>70</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>110;50;110;10;10;10</additional_attributes></element></diagram>

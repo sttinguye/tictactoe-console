@@ -1,0 +1,128 @@
+package iddcz3iloy4p8exloy4p9c6;
+
+/**
+@version 2.0
+@physicalPackage
+@__modelType diagram 
+*/
+class diagram {
+/**
+@__ref <oiref:cpp#Class#CHumanPlayer:oiref><oihard>
+@__modelType reference 
+*/
+class reference {
+}
+/**
+@__ref <oiref:cpp#Class#CDisplay:oiref><oihard>
+@__modelType reference 
+*/
+class reference1 {
+}
+/**
+@__ref <oiref:cpp#Class#CEclipseConsole:oiref><oihard>
+@__modelType reference 
+*/
+class reference2 {
+}
+/**
+@__ref <oiref:cpp#Class#CPlayer:oiref><oihard>
+@__modelType reference 
+*/
+class reference3 {
+}
+/**
+@__ref <oiref:cpp#Class#CPosition:oiref><oihard>
+@__modelType reference 
+*/
+class reference4 {
+}
+/**
+@__ref <oiref:cpp#Class#CGlobal:oiref><oihard>
+@__modelType reference 
+*/
+class reference5 {
+}
+/**
+@__ref <oiref:cpp#Class#CGame:oiref><oihard>
+@__modelType reference 
+*/
+class reference6 {
+}
+/**
+@__ref <oiref:cpp#Class#CBot:oiref><oihard>
+@__modelType reference 
+*/
+class reference7 {
+}
+/**
+@__ref <oiref:cpp#Class#CTicTacToeBoard:oiref><oihard>
+@__modelType reference 
+*/
+class reference8 {
+}
+/**
+@__ref <oiref:cpp#Class#CBoard:oiref><oihard>
+@__modelType reference 
+*/
+class reference9 {
+}
+/**
+@__ref <oiref:design#Class#id3q11iloy4p8exloy4qj1t.diagram:oiref><oihard>
+@__modelType reference
+@__fqn <oiref:#Package#diagram:oiref> 
+*/
+class reference10 {
+}
+}/**
+@__tags
+@shapeType ClassDiagram
+@changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAYvLILQAc3IAE2phdmEudXRp
+bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
+b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
+YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQABnRpbnRpbnQACTxkZWZhdWx0
+PnQABXByb2ZleHg= 
+*/
+class __tags {
+}/**
+@__options 
+*/
+class __options {
+}/**
+@__positions <oigroup:<oiref:cpp#Extends#CBot#CPlayer:oiref>=635,720,635,592:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CDisplay#m_pBoard:oiref>=427,375,28,16,0:oigroup>
+<oigroup:<oiref:design#Class#id3q11iloy4p8exloy4qj1t.diagram:oiref>=820,80,83,95,1:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CGame#m_board:oiref>=341,350,28,16,0:oigroup>
+<oigroup:Autodependency<oiref:cpp#Class#CBoard:oiref><Autodependency><oiref:cpp#Class#CPosition:oiref>=242,640,69,720:oigroup>
+<oigroup:<oiref:cpp#Class#CGame:oiref>=511,10,200,270,1:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CPlayer#m_pBoard:oiref>=322,730,28,16,0:oigroup>
+<oigroup:<oiref:cpp#Class#CHumanPlayer:oiref>=711,720,165,117,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CGame#m_player:oiref>=630,280,630,370:oigroup>
+<oigroup:Autodependency<oiref:cpp#Class#CPlayer:oiref><Autodependency><oiref:cpp#Class#CBoard:oiref>=549,481,423,481:oigroup>
+<oigroup:<oiref:cpp#Class#CDisplay:oiref>=798,370,129,126,1:oigroup>
+<oigroup:<oiref:cpp#Class#CPosition:oiref>=10,720,179,222,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CDisplay#m_pBoard:oiref>=798,395,737,340,584,340,423,410:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CGame#m_board:oiref>=570,280,373,370:oigroup>
+<oigroup:Autodependency<oiref:cpp#Class#CGame:oiref><Autodependency><oiref:cpp#Class#CGlobal:oiref>=511,51,365,51:oigroup>
+<oigroup:<oiref:cpp#Class#CEclipseConsole:oiref>=896,720,125,117,1:oigroup>
+<oigroup:<oiref:cpp#Class#CGlobal:oiref>=282,10,83,82,1:oigroup>
+<oigroup:Autodependency<oiref:cpp#Class#CPosition:oiref><Autodependency><oiref:cpp#Class#CBoard:oiref>=129,720,261,640:oigroup>
+<oigroup:Autodependency<oiref:cpp#Class#CHumanPlayer:oiref><Autodependency><oiref:cpp#Class#CTicTacToeBoard:oiref>=711,814,669,867,417,867:oigroup>
+<oigroup:Autodependency<oiref:cpp#Class#CEclipseConsole:oiref><Autodependency><oiref:cpp#Class#CBoard:oiref>=937,720,937,710,351,640:oigroup>
+<oigroup:<oiref:cpp#Extends#CTicTacToeBoard#CBoard:oiref>=292,750,292,640:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CPlayer#m_pBoard:oiref>=592,592,354,750:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CGame#m_player:oiref>=598,350,28,16,0:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CGame#m_display:oiref>=670,280,862,370:oigroup>
+<oigroup:<oiref:cpp#Class#CBot:oiref>=496,720,165,133,1:oigroup>
+<oigroup:<oiref:cpp#Extends#CEclipseConsole#CDisplay:oiref>=979,720,862,496:oigroup>
+<oigroup:Autodependency<oiref:cpp#Class#CBoard:oiref><Autodependency><oiref:cpp#Class#CGlobal:oiref>=323,370,323,92:oigroup>
+<oigroup:<oiref:cpp#Class#CTicTacToeBoard:oiref>=230,750,187,165,1:oigroup>
+<oigroup:Autodependency<oiref:cpp#Class#CBot:oiref><Autodependency><oiref:cpp#Class#CTicTacToeBoard:oiref>=496,801,417,801:oigroup>
+<oigroup:<oiref:cpp#Extends#CHumanPlayer#CPlayer:oiref>=729,720,729,592:oigroup>
+<oigroup:<oiref:cpp#Class#CPlayer:oiref>=549,370,199,222,1:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CGame#m_display:oiref>=788,350,28,16,0:oigroup>
+<oigroup:<oiref:cpp#Class#CBoard:oiref>=223,370,200,270,1:oigroup> 
+*/
+class __positions {
+}
